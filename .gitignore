@@ -11,5 +11,5 @@ _site/
 .sass-cache/
 .jekyll-metadata
 .jekyll
-# Gemfile
+Gemfile
 Gemfile.lock
