@@ -11,3 +11,7 @@
   @import "toggle";
   @import "dark";
 {%- endif -%}
+
+ul {
+  list-style:none;
+}

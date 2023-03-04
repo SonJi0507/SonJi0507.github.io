@@ -1,10 +1,15 @@
-*.gem
+## MacOS
+*.DS_Store
 .bundle
 .sass-cache
-_site
+node_modules
+package.json
+
+## Jekyll stuff
+/_site/
+_site/
+.sass-cache/
+.jekyll-metadata
+.jekyll
+Gemfile
 Gemfile.lock
-.DS_Store
-vendor
-.jekyll-cache
-tags
-_config2.yml
