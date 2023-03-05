@@ -1,10 +1,19 @@
 ---
 layout: post
-title:  "Test Integrating razorpay into your webapp"
-date:   2019-03-23 21:03:36 +0530
-categories: Javascript NodeJS Python
+title:  "pyenv로 Python 개발환경 셋팅하기!"
+date:   2023-03-05
+categories: Python pyenv
 ---
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+Python 개발을 하다보면 package마다 호환가능한 버젼이 어려가지로 나뉘어 컴퓨터에 가상환경관리가 복잡해진다.
+이에 대한 편의성을 제공해주기 위해 pyenv package가 존재한다.
+### 가상환경
+### pyenv
+### 사용방법
+
+
+```bash
+
+```
 
 ```javascript
 const Razorpay = require('razorpay');

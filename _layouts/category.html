@@ -11,12 +11,22 @@ layout: default
       <hr/>
       <small style="color: #727272;">{{ post.date | date: "%Y-%m-%d"  }}</small>
         <a href="{{ site.baseurl }}{{ post.url }}">
-          <h3>
-          {{ post.title }}
-          </h3>
+          <div>
+            <h3 style="display: inline;">
+            {{ post.title }}
+            </h3>
+            <br/>
+            <ul class="post-categories">
+              {%- for tag in post.categories -%}
+              <li>{{ tag }}</li>
+              {%- endfor -%}
+            </ul>
+          </div>
+          <div>
           <h5 style="color: #727272;">
             {{ post.excerpt }}
           </h5>
+        </div>
         </a>
     </li>
   {% endfor %}
