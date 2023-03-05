@@ -2,33 +2,37 @@
 layout: default
 ---
 <ul class="posts-list">
-  {% assign category = page.category | default: page.title %}
-  <br/>
-  <h2 style="color: #a0a0a0">{{ category }}</h2>
-  <br/>
-  {% for post in site.categories[category] %}
+    {% assign category = page.category | default: page.title %}
+    <br />
+    <h2 style="color: #a0a0a0">{{ category }}</h2>
+    <br />
+    {% for post in site.categories[category] %}
     <li>
-      <hr/>
-      <small style="color: #727272;">{{ post.date | date: "%Y-%m-%d"  }}</small>
-        <a href="{{ site.baseurl }}{{ post.url }}">
-          <div>
-            <h3 style="display: inline;">
-            {{ post.title }}
-            </h3>
-            <br/>
+        <hr/>
+        <div class="post-meta">
+            <div class="post-date">
+                <i class="icon-calendar"></i>
+                <span style="color: #727272;">{{ post.date | date: "%Y-%m-%d" }}</span>
+            </div>
+            {%- if post.categories.size > 0-%}
             <ul class="post-categories">
-              {%- for tag in post.categories -%}
-              <li>{{ tag }}</li>
-              {%- endfor -%}
+                {%- for tag in post.categories -%}
+                <li>{{ tag }}</li>
+                {%- endfor -%}
             </ul>
-          </div>
-          <div>
-          <h5 style="color: #727272;">
-            {{ post.excerpt }}
-          </h5>
+            {%- endif -%}
         </div>
+        <a href="{{ site.baseurl }}{{ post.url }}">
+            <h3 class="post-title" style="display: inline;">
+                {{ post.title }}
+            </h3>
+            <div class="post" style="color: #727272;">
+                {%- if site.show_excerpts -%}
+                {{ post.excerpt }}
+                {%- endif -%}
+            </div>
         </a>
     </li>
-  {% endfor %}
-  
+    {% endfor %}
+
 </ul>
