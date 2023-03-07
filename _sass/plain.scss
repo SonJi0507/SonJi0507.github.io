@@ -151,30 +151,47 @@ main {
 .navigation {
   width: 80%;
 
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 0;
+  ul > li {
+    a {
+      display: block;
+      font-family: 'Merriweather';
+      text-align: left;
+      padding: 0.5rem 0;
+      text-decoration: none;
+      border-bottom: 1px solid #ececec;
 
+      @media screen and (max-width: $mobileW) {
+        padding: 0.5rem 0;
+      }
+    }
+
+    ul {
+      font-size: 14px;
+      list-style-type: disc;
+      a {
+        display: block;
+        font-family: 'Merriweather';
+        text-align: left;
+        padding: 0.1rem 0;
+        text-decoration: none;
+
+        @media screen and (max-width: $mobileW) {
+          padding: 0.0rem 0;
+        }
+      }
+    }
+  }
+
+  ul {
     li:last-child {
       a {
         border-bottom: 0;
       }
     }
-
-    a {
-      display: block;
-      font-family: 'Merriweather';
-      text-align: center;
-      padding: 1rem 0;
-      text-decoration: none;
-      border-bottom: 1px solid #ececec;
-
-      @media screen and (max-width: $mobileW) {
-        padding: 2rem 0;
-      }
-    }
   }
+
+
+
 }
 
 .post-wrapper {

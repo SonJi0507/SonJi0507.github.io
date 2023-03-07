@@ -2,6 +2,9 @@
 layout: default
 ---
 <ul class="posts-list">
+    {% for cate in page.categories %}
+        <span>{{ cate }}</span>
+    {% endfor %}
     {% assign category = page.category | default: page.title %}
     <br />
     <h2 style="color: #a0a0a0">{{ category }}</h2>

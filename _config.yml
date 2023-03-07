@@ -45,12 +45,15 @@ plainwhite:
     # - username: jekyll2
     #   instance: example.com
   navigation:
-  - title : HOME
-    url : "/"
-  - title : Algorithm
-    url : "/category/algorithm.html"
-  - title : Python
-    url : "/category/python.html"
+  - title: HOME
+    url: "/"
+  - title: Algorithm
+    url: "/category/algorithm.html"
+  - title: Python
+    url: "/category/python.html"
+    sub:
+      - title: 개발환경
+        url: "/category/python/devenv.html"
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up

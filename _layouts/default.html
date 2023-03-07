@@ -142,12 +142,13 @@
           {% for link in site.plainwhite.navigation %}
           <li>
             <a href="{{ link.url }}">{{ link.title }}</a>
-
+            {%- if link.sub -%}
             <ul>
-              <li>{{ link.title }}</li>
-              <li>{{ link.title }}</li>
+              {% for sublink in link.sub %}
+              <li><a href="{{ sublink.url }}">{{ sublink.title }}</a></li>
+              {% endfor %}
             </ul>
-            
+            {%- endif -%}
           </li>
           {% endfor %}
         </ul>

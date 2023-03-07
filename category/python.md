@@ -2,6 +2,7 @@
 
 layout: category
 
-title: Python
+title: Sonji's Blog Python
 
+category: Python
 ---

@@ -2,6 +2,8 @@
 
 layout: category
 
-title: Algorithm
+title: Sonji's Blog Algorithm
+
+category:  Algorithm
 
 ---
