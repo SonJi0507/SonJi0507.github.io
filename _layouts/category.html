@@ -3,13 +3,17 @@ layout: default
 ---
 <ul class="posts-list">
     {% assign category = page.category | default: page.title %}
-    <br />
+    <br/>
     <h2 style="color: #a0a0a0">{{ category }}</h2>
-    <br />
+    <hr/>
     {% for post in site.categories[category] %}
     <li>
-        <hr/>
-        <div class="post-meta">
+        <div class="post-categories-meta">
+            <div><a href="{{ site.baseurl }}{{ post.url }}">
+                <h5 class="post-categories-title" style="display: inline;">
+                    {{ post.title }}
+                </h5>
+            </a></div>
             <div class="post-date">
                 <i class="icon-calendar"></i>
                 <span style="color: #727272;">{{ post.date | date: "%Y-%m-%d" }}</span>
@@ -22,16 +26,7 @@ layout: default
             </ul>
             {%- endif -%}
         </div>
-        <a href="{{ site.baseurl }}{{ post.url }}">
-            <h3 class="post-title" style="display: inline;">
-                {{ post.title }}
-            </h3>
-            <div class="post" style="color: #727272;">
-                {%- if site.show_excerpts -%}
-                {{ post.excerpt }}
-                {%- endif -%}
-            </div>
-        </a>
+        
     </li>
     {% endfor %}
 </ul>

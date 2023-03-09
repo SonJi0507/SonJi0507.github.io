@@ -2,39 +2,36 @@
 layout: default
 ---
 <ul class="posts-list">
-    {% for cate in page.categories %}
-        <span>{{ cate }}</span>
-    {% endfor %}
     {% assign category = page.category | default: page.title %}
-    <br />
-    <h2 style="color: #a0a0a0">{{ category }}</h2>
-    <br />
+    <br/>
+    <h2 style="color: #a0a0a0">
+        <span>{{ page.categories[0] }}</span>
+        <span style="font-size: 1.1rem;">> {{ page.categories[1] }}</span>
+    </h2>
+    <hr/>
     {% for post in site.categories[category] %}
-    <li>
-        <hr/>
-        <div class="post-meta">
-            <div class="post-date">
-                <i class="icon-calendar"></i>
-                <span style="color: #727272;">{{ post.date | date: "%Y-%m-%d" }}</span>
-            </div>
-            {%- if post.categories.size > 0-%}
-            <ul class="post-categories">
-                {%- for tag in post.categories -%}
-                <li>{{ tag }}</li>
-                {%- endfor -%}
-            </ul>
-            {%- endif -%}
-        </div>
-        <a href="{{ site.baseurl }}{{ post.url }}">
-            <h3 class="post-title" style="display: inline;">
-                {{ post.title }}
-            </h3>
-            <div class="post" style="color: #727272;">
-                {%- if site.show_excerpts -%}
-                {{ post.excerpt }}
+        {% if post.categories contains '개발환경' %}
+        <li>
+            <div class="post-categories-meta">
+                <a href="{{ site.baseurl }}{{ post.url }}">
+                    <h3 class="post-categories-title" style="display: inline;">
+                        {{ post.title }}
+                    </h3>
+                </a>
+                <div class="post-date">
+                    <i class="icon-calendar"></i>
+                    <span style="color: #727272;">{{ post.date | date: "%Y-%m-%d" }}</span>
+                </div>
+                {%- if post.categories.size > 0-%}
+                <ul class="post-categories">
+                    {%- for tag in post.categories -%}
+                    <li>{{ tag }}</li>
+                    {%- endfor -%}
+                </ul>
                 {%- endif -%}
             </div>
-        </a>
-    </li>
+            
+        </li>
+        {% endif %}
     {% endfor %}
 </ul>

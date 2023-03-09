@@ -150,12 +150,13 @@ main {
 
 .navigation {
   width: 80%;
-
+  
   ul > li {
+    list-style-type: none;
     a {
       display: block;
       font-family: 'Merriweather';
-      text-align: left;
+      text-align: center;
       padding: 0.5rem 0;
       text-decoration: none;
       border-bottom: 1px solid #ececec;
@@ -167,11 +168,11 @@ main {
 
     ul {
       font-size: 14px;
-      list-style-type: disc;
+      font-weight: lighter;
       a {
         display: block;
         font-family: 'Merriweather';
-        text-align: left;
+        text-align: center;
         padding: 0.1rem 0;
         text-decoration: none;
 
@@ -183,11 +184,16 @@ main {
   }
 
   ul {
+    font-weight: bold;
+    padding-left:0; 
+    margin-left:0;
     li:last-child {
       a {
         border-bottom: 0;
       }
     }
+
+ 
   }
 
 
@@ -234,10 +240,28 @@ main {
     }
   }
 }
+.post-categories-meta {
+  display: flex;
+  justify-content: flex-start ;
+  align-items: center;
+  min-height: 2.2rem;
+  @media screen and (max-width: $mobileW) {
+    flex-direction: column;
+    align-items: baseline;
+    .post-date {
+      margin: 10px 0;
+    }
+  }
+}
 .post-link {
   text-decoration: none;
 }
 
+.post-categories-title {
+  line-height: 1.2em;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
 .post-title {
   line-height: 1.2em;
   font-size: 28px;

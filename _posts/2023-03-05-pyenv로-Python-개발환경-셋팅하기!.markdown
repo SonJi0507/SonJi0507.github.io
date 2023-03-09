@@ -2,7 +2,7 @@
 layout: post
 title:  "pyenv로 Python 개발환경 셋팅하기!"
 date:   2023-03-05
-categories: Python pyenv
+categories: Python 개발환경 pyenv
 ---
 Python 개발을 하다보면 package마다 호환가능한 버젼이 어려가지로 나뉘어 컴퓨터에 가상환경관리가 복잡해진다.
 이에 대한 편의성을 제공해주기 위해 pyenv package가 존재한다.
